@@ -1,0 +1,36 @@
+[
+  {
+    "TableName": "mvdb-dev-movies",
+    "operation": "get",
+    "payload": {
+      "Key": {
+        "year": 2019,
+        "title": "Rupert's Big Day Out 2"
+      }
+    }
+  },
+  {
+    "TableName": "mvdb-dev-movies",
+    "operation": "put",
+    "payload": {
+      "Item": {
+        "year": 2019,
+        "title": "Rupert's Big Day Out"
+      }
+    }
+  },
+  {
+    "TableName": "mvdb-dev-movies",
+    "operation": "put",
+    "payload": {
+      "Item": {
+        "year": 2019,
+        "title": "Rupert's Big Day Out 2"
+      },
+      "Item": {
+        "year": 2019,
+        "title": "Rupert's Big Day Out 3"
+      }
+    }
+  }
+]
