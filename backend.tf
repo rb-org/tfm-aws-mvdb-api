@@ -20,7 +20,7 @@ data "terraform_remote_state" "movies_db" {
 
   config = {
     bucket = "${var.remote_state_s3_auto}"
-    region = var.region
+    region = "${var.region}"
     key    = "env:/${terraform.workspace}/dyn-db.tfstate"
   }
 }

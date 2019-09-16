@@ -3,17 +3,20 @@ import os
 import json
 from datetime import datetime
 
+table_name = os.environ['TABLE_NAME']
+
 
 def lambda_handler(event, context):
-    if 'TableName' not in event:
-        raise Exception("No table name specified.")
-    table_name = event['TableName']
+    # if 'TableName' not in event:
+    #     raise Exception("No table name specified.")
+    # table_name = event['TableName']
 
     print(table_name)
 
     print("Received event: " + json.dumps(event, indent=2))
 
-    dynamo = boto3.resource('dynamodb').Table(event['TableName'])
+    # dynamo = boto3.resource('dynamodb').Table(event['TableName'])
+    dynamo = boto3.resource('dynamodb').Table(table_name)
 
     operation = event['operation']
 

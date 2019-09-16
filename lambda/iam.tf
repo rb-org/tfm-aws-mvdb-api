@@ -32,7 +32,7 @@ data "aws_iam_policy_document" "lambda_policy_doc" {
       "dynamodb:UpdateItem"
     ]
     effect    = "Allow"
-    resources = [var.table_arn]
+    resources = ["${var.table_arn}"]
   }
 }
 
