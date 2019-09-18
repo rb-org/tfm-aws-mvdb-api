@@ -2,7 +2,7 @@ terraform {
   required_version = "~>0.12"
 
   backend "s3" {
-    bucket                  = "tfm-remote-state"
+    bucket                  = "tfm-remote-state-240442524813"
     region                  = "eu-west-1"
     key                     = "mvdb-api.tfstate"
     encrypt                 = "true"

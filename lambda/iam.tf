@@ -54,3 +54,9 @@ resource "aws_iam_role_policy_attachment" "lambda_policy_attach" {
   policy_arn = "${aws_iam_policy.lambda_policy.arn}"
 }
 
+resource aws_lambda_permission invoke {
+  action        = "lambda:InvokeFunction"
+  function_name = "${aws_lambda_function.main.function_name}"
+  principal     = "apigateway.amazonaws.com"
+  source_arn    = "${var.api_gw_arn}/*/*/*"
+}

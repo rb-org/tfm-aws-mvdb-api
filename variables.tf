@@ -21,7 +21,7 @@ variable "account_id" {
 # Remote State S3 Bucket
 variable "remote_state_s3_auto" {
   description = "S3 bucket name holding the Terraform remote state file"
-  default     = "tfm-remote-state"
+  default     = "tfm-remote-state-240442524813"
 }
 
 
