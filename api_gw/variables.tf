@@ -4,9 +4,12 @@ variable api_timeout {
 }
 
 variable "lambda_invoke_arn" {}
+variable "lambda_arn" {}
 variable "prefix" {}
 
 variable "default_tags" {
   type = "map"
 }
 variable "region" {}
+variable "lambda_function_name" {}
+variable "account_id" {}

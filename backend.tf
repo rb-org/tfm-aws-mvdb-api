@@ -25,7 +25,15 @@ data "terraform_remote_state" "movies_db" {
   }
 }
 
+data "terraform_remote_state" "movies_base" {
+  backend = "s3"
 
+  config = {
+    bucket = "${var.remote_state_s3_auto}"
+    region = "${var.region}"
+    key    = "env:/${terraform.workspace}/mvdb-base.tfstate"
+  }
+}
 /*
 data "terraform_remote_state" "mgmt_base" {
   backend = "s3"
